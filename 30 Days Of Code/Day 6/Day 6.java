@@ -6,11 +6,12 @@ public class Solution {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
        
+        
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         
-        for(int i = 0; i <= n; i++) {
-            String myStr = scanner.nextLine();
+        for(int i = 0; i < n; i++) {
+            String myStr = scanner.next();
             String even = "";
             String odd = "";
             for (int j = 0; j < myStr.length(); j++) {
@@ -25,5 +26,3 @@ public class Solution {
         }
     }
 }
-    
-   
