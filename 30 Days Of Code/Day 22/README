@@ -1,18 +1,40 @@
 Objective
-Today we're discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!
+Today, we're working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!
 
 Task
-Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.
-
-Note: You must use generics to solve this challenge. Do not write overloaded functions.
+The height of a binary search tree is the number of edges between the tree's root and its furthest leaf. You are given a pointer, , pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.
 
 Input Format
 
-The locked Solution class in your editor will pass different types of arrays to your printArray function.
+The locked stub code in your editor reads the following inputs and assembles them into a binary search tree:
+The first line contains an integer, , denoting the number of nodes in the tree.
+Each of the  subsequent lines contains an integer, , denoting the value of an element that must be added to the BST.
 
-Constraints
-
-You must have exactly  function named printArray.
 Output Format
 
-Your printArray function should print each element of its generic array parameter on a new line.
+The locked stub code in your editor will print the integer returned by your getHeight function denoting the height of the BST.
+
+Sample Input
+
+7
+3
+5
+2
+1
+4
+6
+7
+Sample Output
+
+3
+Explanation
+
+The input forms the following BST:
+
+BST.png
+
+The longest root-to-leaf path is shown below:
+
+Longest RTL.png
+
+There are  nodes in this path that are connected by  edges, meaning our BST's . Thus, we print  as our answer.
