@@ -7,28 +7,23 @@ public class Solution {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */       
         Scanner scanner = new Scanner(System.in);
         
-        int returnDay = scanner.nextInt();
-        int returnMonth = scanner.nextInt();
-        int returnYear = scanner.nextInt();
-        int dueDay = scanner.nextInt();
-        int dueMonth = scanner.nextInt();
-        int dueYear = scanner.nextInt();
+        int actualDay = scanner.nextInt();
+        int actualMonth = scanner.nextInt();
+        int actualYear = scanner.nextInt();
+        int expectedDay = scanner.nextInt();
+        int expectedMonth = scanner.nextInt();
+        int expectedYear = scanner.nextInt();
         int fine = 0;
         
-        if(returnYear <= dueYear) {
-            if(returnMonth <= dueMonth) {
-                if(returnDay <= dueDay) {
-                } else { 
-                    fine = (returnDay - dueDay) * 15;
-                }
-            } else {
-                fine = (returnMonth - dueMonth) * 500;
-            }
-        } else {
+        if (actualYear > expectedYear) {
             fine = 10000;
+        } else if (actualMonth > expectedMonth && (actualYear >= expectedYear)) {
+            fine = 500 * (actualMonth - expectedMonth);
+        } else if (actualDay > expectedDay && (actualMonth >= expectedMonth) &&(actualYear >= expectedYear)) {
+            fine = 15 * (actualDay - expectedDay);
         }
-        
         System.out.println(fine);
+
         scanner.close();
     }
 }
