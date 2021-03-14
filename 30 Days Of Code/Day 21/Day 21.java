@@ -9,7 +9,7 @@ class Printer <T> {
     **/
     
     // Write your code here
-    protected <T> void printArray(T[] arr) {
+    protected <T> void printArray(T... arr) {
         for(T x : arr) {
         System.out.println(x);
     }
