@@ -11,7 +11,7 @@ public class Solution {
         // 'largest' must be the lexicographically largest substring of length 'k'
         smallest = largest = s.substring(0, k);
         
-        for (int i=1; i<s.length()-k+1; i++) {
+        for (int i = 1; i < s.length() - k + 1; i++) {
         String substr = s.substring(i, i+k);
 
         if (smallest.compareTo(substr) > 0) {
