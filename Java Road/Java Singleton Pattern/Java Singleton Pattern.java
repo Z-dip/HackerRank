@@ -11,7 +11,7 @@ class Singleton{
     
     private Singleton() {}
     
-    static Singleton getSingleInstance() {
+    public static Singleton getSingleInstance() {
         return new Singleton();
     }
 
