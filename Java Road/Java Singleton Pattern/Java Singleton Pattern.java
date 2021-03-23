@@ -8,11 +8,15 @@ import java.lang.reflect.*;
 
 class Singleton{
     public String str;
+    private static Singleton instance = null;
     
     private Singleton() {}
     
     public static Singleton getSingleInstance() {
-        return new Singleton();
+        if (instance = null) {
+            instance = new Singleton();
+        }
+        return instance;
     }
-
+    
 }
